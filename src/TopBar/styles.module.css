@@ -1,0 +1,28 @@
+.topBar {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--bg-offwhite);
+    width: 100vw;
+    padding: 20px 0px;
+}
+
+.logo {
+    font-size: large;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.contact {
+    font-weight: 700;
+    padding: 8px 15px;
+    border-radius: 99px;
+    background-color: var(--highlight-yellow);
+}

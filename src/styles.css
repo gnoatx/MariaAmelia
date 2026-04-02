@@ -1,0 +1,47 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #333333;
+    padding-bottom: 200vh;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+.light-lato {
+  font-family: "Lato", "Open Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+#hero {
+    padding-top: 73px;
+    width: 100%;
+    height: 66.6vw;
+    max-height: 90vh;
+    background-image: url("./assets/Alex\ Green\ de\ Pexels.webp");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+#title {
+    background-color: var(--highlight-yellow);
+    position: relative;
+    /* Calculates browser edge distance to TopBar logo */
+    margin-left: calc((100vw - 584px) / 6);
+    padding-left: 10px;
+    padding-bottom: 100px;
+    width: 300px;
+}
