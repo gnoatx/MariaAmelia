@@ -1,13 +1,17 @@
 import styles from './styles.module.css'
 
-export default function TopBar() {
+interface Props {
+  isScrolled: boolean
+}
+
+export default function TopBar({ isScrolled }: Props) {
   return (
     <>
       <div className={styles.shadow}>
       </div>
-      <header className={styles.topBar}>
+      <header className={`${styles.topBar} ${isScrolled ? styles.scrolled : ''}`}>
         <a href="#hero">
-          <div className={`${styles.logo} light-lato`} title="Maria Amélia Psicoterapia"></div>
+          <div className={`${styles.logo} light-lato ${isScrolled ? styles.scrolled : ''}`} title="Maria Amélia Psicoterapia"></div>
         </a>
         <nav className={styles.nav}>
           <a href="#beneficios">Benefícios</a>

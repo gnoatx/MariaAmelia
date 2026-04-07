@@ -1,9 +1,11 @@
 .shadow {
     position: fixed;
+    top: 0;
     width: 100vw;
-    height: 100vh;
+    height: 0;
+    /* height: 100vh; */
     /* background-color: red; */
-    box-shadow: inset 0 70px 100px #000000;
+    box-shadow: 0 0 100px 50px #000000;
     
 }
 
@@ -44,39 +46,27 @@
     width: 232px;
 }
 
-.logo::before {
+.logo::before, .logo::after {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('../assets/logo-pink.avif');
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    opacity: 1;
+    inset: 0;
+    background: no-repeat center / contain;
     transition: opacity 0.2s;
 }
 
-.topBar:hover .logo::before {
+.logo::before {
+    background-image: url('../assets/logo-pink.avif');
+    opacity: 1;
+}
+
+.topBar:hover .logo::before, .logo.scrolled::before  {
     opacity: 0;
     transition: opacity 0.2s;
 }
 
 .logo::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
     background-image: url('../assets/logo-full-colour.avif');
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
     opacity: 0;
-    transition: opacity 0.2s;
 }
 
 .topBar:hover .logo::after {
