@@ -3,8 +3,6 @@
     top: 0;
     width: 100vw;
     height: 0;
-    /* height: 100vh; */
-    /* background-color: red; */
     box-shadow: 0 0 100px 50px #000000;
     
 }
@@ -22,17 +20,7 @@
     transition: 0.2s;
 }
 
-/* .topBar::backdrop {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    box-shadow: inset 0 100px 70px #000000cc;
-} */
-
-.topBar:hover {
+.topBar:hover, .topBar.scrolled {
     transition: 0.2s;
     background-color: var(--bg-offwhite);
     color: black;
@@ -69,7 +57,7 @@
     opacity: 0;
 }
 
-.topBar:hover .logo::after {
+.topBar:hover .logo::after, .logo.scrolled::after {
     opacity: 1;
     transition: opacity 0.2s;
 }

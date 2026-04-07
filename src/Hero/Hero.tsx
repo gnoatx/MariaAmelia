@@ -11,7 +11,7 @@ export default function TopBar({scrollTriggerRef}: Props) {
       <div className={styles.title}>
         <div ref={scrollTriggerRef} className={styles.sentinel}></div>
         <h1 className="light-lato">
-          Psicoterapia lorem ipsum dolor sit amet
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit.
         </h1>
         <a href="#contato" className={styles.contact}>Mude sua vida</a>
       </div>
