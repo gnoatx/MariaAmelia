@@ -3,8 +3,15 @@
     top: 0;
     width: 100vw;
     height: 0;
-    box-shadow: 0 0 100px 50px #000000;
-    
+    box-shadow: 0 0 100px 50px #000000ff;
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.shadow:not(.scrolled):not(:has(+ .topBar:hover)) {
+    opacity: 1;
+    transition: opacity 0.2s;
 }
 
 .topBar {
@@ -15,7 +22,6 @@
     align-items: center;
     width: 100vw;
     z-index: 1000;
-    /* padding: 30px 0px; */
     color: var(--highlight-pink);
     transition: 0.2s;
 }
@@ -24,6 +30,9 @@
     transition: 0.2s;
     background-color: var(--bg-offwhite);
     color: black;
+    box-shadow:
+        var(--shadow-8),
+        var(--shadow-16);
 }
 
 .logo {

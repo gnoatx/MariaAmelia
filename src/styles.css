@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    background-color: #333333;
+    background-color: var(--bg-offwhite);
     padding-bottom: 500vh;
     font-family: "Open Sans", sans-serif;
     font-optical-sizing: auto;

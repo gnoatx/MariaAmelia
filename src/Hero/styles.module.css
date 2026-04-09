@@ -17,11 +17,17 @@
     /* Calculates browser edge distance to TopBar logo */
     margin-left: calc((100vw - 584px) / 6);
     bottom: -20px;
-    padding: 10px 30px 100px;
+    padding: 10px 30px 30px;
     width: fit-content;
     max-width: 300px;
     background-color: var(--bg-offwhite);
+    /* background-image: linear-gradient(
+        var(--bg-offwhite) 0%,
+        var(--bg-offwhite) 80%,
+        white 100%
+    ); */
     border-radius: 22px;
+    box-shadow: var(--shadow-16)
 }
 
 .title h1 {

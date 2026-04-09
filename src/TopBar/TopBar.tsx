@@ -7,7 +7,7 @@ interface Props {
 export default function TopBar({ isScrolled }: Props) {
   return (
     <>
-      <div className={styles.shadow}>
+      <div className={`${styles.shadow} ${isScrolled ? styles.scrolled : ''}`}>
       </div>
       <header className={`${styles.topBar} ${isScrolled ? styles.scrolled : ''}`}>
         <a href="#hero">
