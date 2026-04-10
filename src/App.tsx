@@ -28,6 +28,12 @@ function App() {
     <>
       <TopBar isScrolled={isScrolled} />
       <Hero scrollTriggerRef={scrollTriggerRef} />
+      <main>
+        <div>a</div>
+        <div>a</div>
+        <div>a</div>
+        <div>a</div>
+      </main>
     </>
   )
 }

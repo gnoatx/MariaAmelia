@@ -31,7 +31,7 @@
     background-color: var(--bg-offwhite);
     color: black;
     box-shadow:
-        var(--shadow-8),
+        var(--shadow-4),
         var(--shadow-16);
 }
 
