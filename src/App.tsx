@@ -1,7 +1,8 @@
+import { useState, useEffect, useRef } from 'react'
 import './styles.css'
 import TopBar from "./TopBar"
 import Hero from "./Hero"
-import { useState, useEffect, useRef } from 'react'
+import Benefits from './Benefits';
 
 function App() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -29,6 +30,7 @@ function App() {
       <TopBar isScrolled={isScrolled} />
       <Hero scrollTriggerRef={scrollTriggerRef} />
       <main>
+        <Benefits />
         <div>a</div>
         <div>a</div>
         <div>a</div>

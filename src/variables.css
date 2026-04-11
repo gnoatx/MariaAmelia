@@ -1,9 +1,7 @@
 :root {
     --bg-offwhite: #f4f3f2;
-    --highlight-yellow: #f8c446;
-    --lowlight-yellow: #c69810;
-    --highlight-teal: #416b70;
     --highlight-pink: #bf799b;
+    --secondary-pink: #edc7da;
     
     --shadow-1: 0 1px 1px hsl(0deg 0% 0% / 0.075);
     --shadow-2: 0 2px 2px hsl(0deg 0% 0% / 0.075);

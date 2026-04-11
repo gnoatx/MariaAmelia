@@ -30,19 +30,26 @@ a {
 main {
     display: flex;
     flex-direction: column;
+    position: relative;
     width: 100%;
+    min-height: 200vh;
     padding: 80px 5% 0;
     gap: 60px;
 }
 
-/* WORK IN PROGRESS */
 main::before {
     content: "";
     inset: 0;
-    position: relative;
+    position: absolute;
     z-index: -1;
-    background-image: linear-gradient(to bottom, transparent 0%, var(--highlight-pink) 100%);
-    /* mask-image: radial-gradient(ellipse at bottom, black 0%, transparent 20%); */
+    background-image: linear-gradient(to bottom, var(--secondary-pink) 0%, var(--highlight-pink) 100%);
+
+    mask-image:
+        radial-gradient(ellipse 90% 800px at 50% 750px, black 0%, black 30%, rgba(0,0,0,0.4) 60%, transparent 95%),
+        linear-gradient(to bottom, transparent 0px, transparent 250px, black 750px, black 100%);
+    mask-size: 100% 100%;
+    mask-position: 0 0;
+    mask-repeat: no-repeat;
 }
 
 main > * {
