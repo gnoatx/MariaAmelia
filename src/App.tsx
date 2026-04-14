@@ -3,6 +3,7 @@ import './styles.css'
 import TopBar from "./TopBar"
 import Hero from "./Hero"
 import Benefits from './Benefits';
+import Testimonials from './Testimonials';
 
 function App() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -31,10 +32,10 @@ function App() {
       <Hero scrollTriggerRef={scrollTriggerRef} />
       <main>
         <Benefits />
-        <div>a</div>
-        <div>a</div>
-        <div>a</div>
-        <div>a</div>
+        <Testimonials />
+        <section>a</section>
+        <section>a</section>
+        <section>a</section>
       </main>
     </>
   )

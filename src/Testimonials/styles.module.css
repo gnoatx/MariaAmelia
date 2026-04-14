@@ -1,0 +1,15 @@
+.sectionTitle {
+    font-size: 2.5rem;
+    max-width: 70%;
+}
+
+.testimonials {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.item {
+    width: 200px;
+    
+}

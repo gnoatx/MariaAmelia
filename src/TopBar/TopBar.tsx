@@ -13,12 +13,12 @@ export default function TopBar({ isScrolled }: Props) {
         <a href="#hero">
           <div className={`${styles.logo} light-lato ${isScrolled ? styles.scrolled : ''}`} title="Maria Amélia Psicoterapia"></div>
         </a>
-        <nav className={styles.nav}>
+        <nav className={`${styles.nav} normal-open`}>
           <a href="#beneficios">Benefícios</a>
-          <a href="#testemunhos">Testemunhos</a>
+          <a href="#depoimentos">Depoimentos</a>
           <a href="#servicos">Serviços</a>
         </nav>
-        <a href="#contato" className={styles.contact}>Contato</a>
+        <a href="#contato" className={`${styles.contact} button`}>Contato</a>
       </header>
     </>
   )
