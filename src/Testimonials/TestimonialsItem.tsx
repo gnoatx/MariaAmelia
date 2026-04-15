@@ -1,21 +1,16 @@
 import styles from './styles.module.css'
+import { type TestimonialsItemType } from './Testimonials'
 
-interface Props {
-  name: string,
-  photo: string,
-  text: string
-}
-
-export function TestimonialsItem({ name, photo, text }: Props) {
-const photoUrl = new URL(`../assets/testimonials/${photo}.avif`, import.meta.url).href
+export function TestimonialsItem({ name, photo, text }: TestimonialsItemType) {
+  const photoUrl = new URL(`../assets/testimonials/${photo}.avif`, import.meta.url).href
 
   return (
     <figure className={styles.item}>
-      <img src={photoUrl} alt={`Foto de ${name}`} />
+      <img className={styles.photo} src={photoUrl} alt={`Foto de ${name}`} width={400}/>
       <q className={styles.testimonial}>{text}</q>
-      <figcaption>
-        {/* Icon */}
-        <cite>{name}</cite>
+      <figcaption className={styles.citeCaption}>
+          <div className={styles.citeDot}></div>
+          <cite className={`${styles.cite} normal-open`}>{name}</cite>
       </figcaption>
     </figure>
   )

@@ -1,6 +1,30 @@
 .sectionTitle {
     font-size: 2.5rem;
     max-width: 70%;
+    padding: 0 5%;
+}
+
+.testimonialsWrapper {
+    padding: 100px 0;
+    overflow-x: hidden;
+}
+
+.testimonialsNav {
+    padding: 0 5%;
+    display: flex;
+    gap: 20px;
+}
+
+.buttonNav {
+    background-color: transparent;
+    border: 2px solid black;
+    width: 38px;
+    height: 38px;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
 }
 
 .testimonials {
@@ -9,7 +33,43 @@
     align-items: flex-start;
 }
 
+.isTransitioning {
+    transition-property: transform;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 400ms; 
+}
+
 .item {
-    width: 200px;
-    
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.photo {
+    border-radius: 20px;
+}
+
+.testimonial {
+    font-size: 0.9rem;
+}
+
+.citeCaption {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.citeDot {
+    width: 0.8cap;
+    height: 0.8cap;
+    background-color: var(--secondary-pink);
+    border-radius: 50%;
+    box-shadow: 0 0 3px 2px var(--secondary-pink);
+}
+
+.cite {
+    line-height: 1;
+    transform: translateY(-1px);
+    font-weight: 600;
 }
