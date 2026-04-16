@@ -18,7 +18,7 @@ export default function TopBar({ isScrolled }: Props) {
           <a href="#depoimentos">Depoimentos</a>
           <a href="#servicos">Serviços</a>
         </nav>
-        <a href="#contato" className={`${styles.contact} button`}>Contato</a>
+        <a href="#contato" className="buttonColor">Contato</a>
       </header>
     </>
   )

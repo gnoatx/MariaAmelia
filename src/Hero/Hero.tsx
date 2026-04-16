@@ -13,7 +13,7 @@ export default function TopBar({scrollTriggerRef}: Props) {
         <h1 className="light-lato">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit.
         </h1>
-        <a href="#contato" className={`${styles.contact} button`}>Mude sua vida</a>
+        <a href="#contato" className="buttonColor">Mude sua vida</a>
       </div>
     </header>
   )

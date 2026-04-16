@@ -14,8 +14,18 @@ interface Props {
 }
 
 export default function Testimonials({ list }: Props) {
+  // Textos e ilustração
+  const sectionTitle: string = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita amet excepturi, necessitatibus, reiciendis qui itaque."
+  const callout: string = "Lorem ipsum dolor, sit amet consectetur adipisicing elit. In libero dolorem eveniet dolorum soluta."
+  const calloutButton: string = "Exemplo de CTA"
+  const illustration = {
+    url: new URL(`../assets/placeholder-icon.png`, import.meta.url).href,
+    altText: "Placeholder"
+  }
+
+  const isPlaceholder = illustration.url === new URL(`../assets/placeholder-icon.png`, import.meta.url).href
+
   const buffer = 5
-  
   const [currentIndex, setCurrentIndex] = useState(buffer)
   const [isTransitioning, setIsTransitioning] = useState(false)
   
@@ -51,11 +61,10 @@ export default function Testimonials({ list }: Props) {
     }
   }
 
-
   return (
     <section id="depoimentos">
-      <h1 className={`${styles.sectionTitle} light-lato`}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae maiores laudantium dolorem id, excepturi, nemo delectus qui soluta saepe, corporis ut.</h1>
-      <div className={styles.testimonialsWrapper}>
+      <h1 className={`${styles.sectionTitle} light-lato`}>{sectionTitle}</h1>
+      <div className={styles.testimonialsContainer}>
         <nav className={styles.testimonialsNav}>
           <button className={styles.buttonNav} onClick={handlePrev}>
             <ArrowLeft />
@@ -64,11 +73,8 @@ export default function Testimonials({ list }: Props) {
             <ArrowRight />
           </button>
         </nav>
-        <div
-          className={`
-            ${styles.testimonials}
-            ${isTransitioning ? styles.isTransitioning : ''}
-          `}
+        <div className={`${styles.testimonials}
+          ${isTransitioning ? styles.isTransitioning : ''}`}
           onTransitionEnd={handleTransitionEnd}
           style={{transform: `translateX(calc(
             -${currentIndex * totalItemWidth}px
@@ -81,6 +87,19 @@ export default function Testimonials({ list }: Props) {
           ))}
         </div>
       </div>
+      <footer className={styles.calloutContainer}>
+        <div className={styles.calloutTextContainer}>
+          <h2 className={`${styles.callout} light-lato`}>{callout}</h2>
+          <a href="#contato" className="buttonOutline">{calloutButton}</a>
+        </div>
+        <div className={styles.illustrationWrapper}>
+          <img className={`${styles.illustration}
+            ${isPlaceholder ? styles.illustrationPlaceholder : ''}`}
+            src={illustration.url}
+            alt={illustration.altText}
+          />
+        </div>
+      </footer>
     </section>
   )
 }
