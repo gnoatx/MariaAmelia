@@ -6,7 +6,12 @@ export function TestimonialsItem({ name, photo, text }: TestimonialsItemType) {
 
   return (
     <figure className={styles.item}>
-      <img className={styles.photo} src={photoUrl} alt={`Foto de ${name}`} width={400}/>
+      <img className={styles.photo}
+        src={photoUrl}
+        alt={`Foto por ${photo.replaceAll('-',' ')} em Unsplash`}
+        title={`Foto por ${photo.replaceAll('-',' ')} em Unsplash`}
+        width={400}
+      />
       <q className={styles.testimonial}>{text}</q>
       <figcaption className={styles.citeCaption}>
           <div className={styles.citeDot}></div>

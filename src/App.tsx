@@ -1,10 +1,11 @@
 import { useState, useEffect, useRef } from 'react'
 import './styles.css'
-import TopBar from "./TopBar"
-import Hero from "./Hero"
-import Benefits from './Benefits';
-import Testimonials, { type TestimonialsItemType } from './Testimonials';
+import TopBar from './TopBar'
+import Hero from './Hero'
+import Benefits from './Benefits'
+import Testimonials, { type TestimonialsItemType } from './Testimonials'
 import testimonialsData from './assets/testimonials.json'
+import Service from './Service'
 
 function App() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -36,9 +37,11 @@ function App() {
       <main>
         <Benefits />
         <Testimonials list={testimonialsList} />
-        <section>a</section>
-        <section>a</section>
-        <section>a</section>
+        <Service id='servicos' title='Psicoterapia' buttonText='Exemplo de CTA' image='Toa-Heftiba' description='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima explicabo dolores modi consequuntur suscipit! Architecto sapiente, et ducimus culpa vitae libero dolorem aliquid ab in delectus cupiditate possimus odio consequuntur?' />
+        <Service id='orientacao' title='Orientação Profissional' buttonText='Exemplo de CTA' image='Sandy-Ching' description='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima explicabo dolores modi consequuntur suscipit! Architecto sapiente, et ducimus culpa vitae libero dolorem aliquid ab in delectus cupiditate possimus odio consequuntur?' />
+        {/* <Service id='orientacao' title='Orientação Profissional' buttonText='Exemplo de CTA' image='Vitaly-Gariev1' description='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima explicabo dolores modi consequuntur suscipit! Architecto sapiente, et ducimus culpa vitae libero dolorem aliquid ab in delectus cupiditate possimus odio consequuntur?' /> */}
+        {/* <Service id='orientacao' title='Orientação Profissional' buttonText='Exemplo de CTA' image='Vitaly-Gariev2' description='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima explicabo dolores modi consequuntur suscipit! Architecto sapiente, et ducimus culpa vitae libero dolorem aliquid ab in delectus cupiditate possimus odio consequuntur?' /> */}
+        {/* <Service id='orientacao' title='Orientação Profissional' buttonText='Exemplo de CTA' image='Vitaly-Gariev3' description='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima explicabo dolores modi consequuntur suscipit! Architecto sapiente, et ducimus culpa vitae libero dolorem aliquid ab in delectus cupiditate possimus odio consequuntur?' /> */}
       </main>
     </>
   )

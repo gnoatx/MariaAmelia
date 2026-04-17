@@ -5,7 +5,7 @@ interface Props {
   scrollTriggerRef: RefObject<HTMLDivElement | null>
 }
 
-export default function TopBar({scrollTriggerRef}: Props) {
+export default function Hero({scrollTriggerRef}: Props) {
   return (
     <header id="hero" className={styles.hero}>
       <div className={styles.title}>
