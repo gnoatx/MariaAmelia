@@ -14,6 +14,10 @@
     transition: opacity 0.2s;
 }
 
+.shadow.hidden {
+    transform: translateY(-200px);
+}
+
 .topBar {
     position: fixed;
     display: flex;
@@ -35,6 +39,10 @@
         var(--shadow-16);
 }
 
+.topBar.hidden {
+    transform: translateY(-200px);
+}
+
 .logo {
     display: block;
     position: relative;
@@ -48,7 +56,7 @@
     position: absolute;
     inset: 0;
     background: no-repeat center / contain;
-    transition: opacity 0.2s;
+    transition: 0.2s;
 }
 
 .logo::before {
@@ -58,7 +66,7 @@
 
 .topBar:hover .logo::before, .logo.scrolled::before  {
     opacity: 0;
-    transition: opacity 0.2s;
+    transition: 0.2s;
 }
 
 .logo::after {

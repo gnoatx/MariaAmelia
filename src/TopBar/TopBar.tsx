@@ -1,15 +1,22 @@
 import styles from './styles.module.css'
 
 interface Props {
-  isScrolled: boolean
+  isScrolled: boolean,
+  isAtContact: boolean
 }
 
-export default function TopBar({ isScrolled }: Props) {
+export default function TopBar({ isScrolled, isAtContact }: Props) {
   return (
     <>
-      <div className={`${styles.shadow} ${isScrolled ? styles.scrolled : ''}`}>
+      <div className={`${styles.shadow}
+        ${isScrolled ? styles.scrolled : ''}
+        ${isAtContact ? styles.hidden : ''}
+      `}>
       </div>
-      <header className={`${styles.topBar} ${isScrolled ? styles.scrolled : ''}`}>
+      <header className={`${styles.topBar}
+        ${isScrolled ? styles.scrolled : ''}
+        ${isAtContact ? styles.hidden : ''}
+      `}>
         <a href="#hero">
           <div className={`${styles.logo} light-lato ${isScrolled ? styles.scrolled : ''}`} title="Maria Amélia Psicoterapia"></div>
         </a>

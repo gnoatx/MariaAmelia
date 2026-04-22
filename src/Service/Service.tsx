@@ -16,7 +16,7 @@ export default function Service({ id, title, description, buttonText, image }: P
       <div className={styles.container}>
         <h1 className={`${styles.sectionTitle} light-lato`}>{title}</h1>
         <p className={styles.description}>{description}</p>
-        <a href="#contact" className="buttonOutline">{buttonText}</a>
+        <a href="#contato" className="buttonOutline">{buttonText}</a>
       </div>
       <img className={styles.image} src={imageUrl} alt={title} title={`Foto por ${image.replaceAll('-',' ')} em Unsplash`} />
     </section>

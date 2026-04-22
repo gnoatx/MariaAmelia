@@ -4,27 +4,41 @@ import TopBar from './TopBar'
 import Hero from './Hero'
 import Benefits from './Benefits'
 import Testimonials, { type TestimonialsItemType } from './Testimonials'
-import testimonialsData from './assets/testimonials.json'
+import testimonialsData from './assets/testimonials/testimonials.json'
 import Service from './Service'
+import Contact from './Contact'
 
 function App() {
   const [isScrolled, setIsScrolled] = useState(false)
-  const scrollTriggerRef = useRef<HTMLDivElement>(null)
+  const [isAtContact, setIsAtContact] = useState(false)
+
+  const styleTriggerRef = useRef<HTMLDivElement>(null)
+  const hideTriggerRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    const cachedTrigger = scrollTriggerRef.current;
+    const styleTrigger = styleTriggerRef.current
+    const hideTrigger = hideTriggerRef.current
 
-    const observer = new IntersectionObserver(
+    const styleObserver = new IntersectionObserver(
       ([entry]) => {
         setIsScrolled(!entry.isIntersecting)
       },
       { threshold: [0, 0.1] }
     )
 
-    if (cachedTrigger) observer.observe(cachedTrigger)
+    const hideObserver = new IntersectionObserver(
+      ([entry]) => {
+        setIsAtContact(entry.isIntersecting)
+      },
+      { threshold: [1.0] }
+    )
+
+    if (styleTrigger) styleObserver.observe(styleTrigger)
+    if (hideTrigger) hideObserver.observe(hideTrigger)
 
     return() => {
-      if(cachedTrigger) observer.unobserve(cachedTrigger)
+      styleObserver.disconnect()
+      hideObserver.disconnect()
     }
   }, [])
 
@@ -32,17 +46,15 @@ function App() {
 
   return (
     <>
-      <TopBar isScrolled={isScrolled} />
-      <Hero scrollTriggerRef={scrollTriggerRef} />
+      <TopBar isScrolled={isScrolled} isAtContact={isAtContact} />
+      <Hero styleTriggerRef={styleTriggerRef} />
       <main>
         <Benefits />
         <Testimonials list={testimonialsList} />
         <Service id='servicos' title='Psicoterapia' buttonText='Exemplo de CTA' image='Toa-Heftiba' description='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima explicabo dolores modi consequuntur suscipit! Architecto sapiente, et ducimus culpa vitae libero dolorem aliquid ab in delectus cupiditate possimus odio consequuntur?' />
         <Service id='orientacao' title='Orientação Profissional' buttonText='Exemplo de CTA' image='Sandy-Ching' description='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima explicabo dolores modi consequuntur suscipit! Architecto sapiente, et ducimus culpa vitae libero dolorem aliquid ab in delectus cupiditate possimus odio consequuntur?' />
-        {/* <Service id='orientacao' title='Orientação Profissional' buttonText='Exemplo de CTA' image='Vitaly-Gariev1' description='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima explicabo dolores modi consequuntur suscipit! Architecto sapiente, et ducimus culpa vitae libero dolorem aliquid ab in delectus cupiditate possimus odio consequuntur?' /> */}
-        {/* <Service id='orientacao' title='Orientação Profissional' buttonText='Exemplo de CTA' image='Vitaly-Gariev2' description='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima explicabo dolores modi consequuntur suscipit! Architecto sapiente, et ducimus culpa vitae libero dolorem aliquid ab in delectus cupiditate possimus odio consequuntur?' /> */}
-        {/* <Service id='orientacao' title='Orientação Profissional' buttonText='Exemplo de CTA' image='Vitaly-Gariev3' description='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima explicabo dolores modi consequuntur suscipit! Architecto sapiente, et ducimus culpa vitae libero dolorem aliquid ab in delectus cupiditate possimus odio consequuntur?' /> */}
       </main>
+      <Contact hideTriggerRef={hideTriggerRef} />
     </>
   )
 }
