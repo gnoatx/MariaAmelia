@@ -17,7 +17,7 @@ export default function TopBar({ isScrolled, isAtContact }: Props) {
         ${isScrolled ? styles.scrolled : ''}
         ${isAtContact ? styles.hidden : ''}
       `}>
-        <a href="#hero">
+        <a href="#">
           <div className={`${styles.logo} light-lato ${isScrolled ? styles.scrolled : ''}`} title="Maria Amélia Psicoterapia"></div>
         </a>
         <nav className={`${styles.nav} normal-open`}>

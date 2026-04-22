@@ -7,7 +7,7 @@ interface Props {
 
 export default function Hero({styleTriggerRef}: Props) {
   return (
-    <header id="hero" className={styles.hero}>
+    <header className={styles.hero}>
       <div className={styles.title}>
         <div ref={styleTriggerRef} className={styles.sentinel}></div>
         <h1 className="light-lato">

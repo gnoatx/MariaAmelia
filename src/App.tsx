@@ -13,7 +13,7 @@ function App() {
   const [isAtContact, setIsAtContact] = useState(false)
 
   const styleTriggerRef = useRef<HTMLDivElement>(null)
-  const hideTriggerRef = useRef<HTMLDivElement>(null)
+  const hideTriggerRef = useRef<HTMLAnchorElement>(null)
 
   useEffect(() => {
     const styleTrigger = styleTriggerRef.current
