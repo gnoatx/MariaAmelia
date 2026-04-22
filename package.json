@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@thesvg/react": "^2.1.5",
     "lucide-react": "^1.8.0",
     "normalize.css": "^8.0.1",
     "react": "^19.2.4",
