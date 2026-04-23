@@ -6,6 +6,7 @@ import Benefits from './Benefits'
 import Testimonials, { type TestimonialsItemType } from './Testimonials'
 import testimonialsData from './assets/testimonials/testimonials.json'
 import Service from './Service'
+import { serviceVariables } from './variables'
 import Contact from './Contact'
 
 function App() {
@@ -51,8 +52,9 @@ function App() {
       <main>
         <Benefits />
         <Testimonials list={testimonialsList} />
-        <Service id='servicos' title='Psicoterapia' buttonText='Exemplo de CTA' image='Toa-Heftiba' description='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima explicabo dolores modi consequuntur suscipit! Architecto sapiente, et ducimus culpa vitae libero dolorem aliquid ab in delectus cupiditate possimus odio consequuntur?' />
-        <Service id='orientacao' title='Orientação Profissional' buttonText='Exemplo de CTA' image='Sandy-Ching' description='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima explicabo dolores modi consequuntur suscipit! Architecto sapiente, et ducimus culpa vitae libero dolorem aliquid ab in delectus cupiditate possimus odio consequuntur?' />
+        {serviceVariables.serviceList.map((item, i) => (
+          <Service key={i} service={item} />
+        ))}
       </main>
       <Contact hideTriggerRef={hideTriggerRef} />
     </>

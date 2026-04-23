@@ -2,6 +2,7 @@ import { useState, useCallback } from 'react'
 import styles from './styles.module.css'
 import { TestimonialsItem } from './TestimonialsItem'
 import { ArrowLeft, ArrowRight } from 'lucide-react'
+import { testimonialsVariables as VAR } from '../variables'
 
 export type TestimonialsItemType = {
   name: string,
@@ -14,16 +15,8 @@ interface Props {
 }
 
 export default function Testimonials({ list }: Props) {
-  // Textos e ilustração
-  const sectionTitle: string = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita amet excepturi, necessitatibus, reiciendis qui itaque."
-  const callout: string = "Lorem ipsum dolor, sit amet consectetur adipisicing elit. In libero dolorem eveniet dolorum soluta."
-  const calloutButton: string = "Exemplo de CTA"
-  const illustration = {
-    url: new URL(`../assets/placeholder-icon.png`, import.meta.url).href,
-    altText: "Placeholder"
-  }
-
-  const isPlaceholder = illustration.url === new URL(`../assets/placeholder-icon.png`, import.meta.url).href
+  const illustrationPlaceholder = new URL(`../assets/placeholder-icon.png`, import.meta.url).href
+  const isPlaceholder = VAR.illustration.url === illustrationPlaceholder
 
   const buffer = 5
   const [currentIndex, setCurrentIndex] = useState(buffer)
@@ -62,8 +55,8 @@ export default function Testimonials({ list }: Props) {
   }
 
   return (
-    <section id="depoimentos">
-      <h1 className={`${styles.sectionTitle} light-lato`}>{sectionTitle}</h1>
+    <section id={VAR.id}>
+      <h1 className={`${styles.sectionTitle} light-lato`}>{VAR.sectionTitle}</h1>
       <div className={styles.testimonialsContainer}>
         <nav className={styles.testimonialsNav}>
           <button className={styles.buttonNav} onClick={handlePrev}>
@@ -89,14 +82,14 @@ export default function Testimonials({ list }: Props) {
       </div>
       <footer className={styles.calloutContainer}>
         <div className={styles.calloutTextContainer}>
-          <h2 className={`${styles.callout} light-lato`}>{callout}</h2>
-          <a href="#contato" className="buttonOutline">{calloutButton}</a>
+          <h2 className={`${styles.callout} light-lato`}>{VAR.callout}</h2>
+          <a href={VAR.button.href} className="buttonOutline">{VAR.button.text}</a>
         </div>
         <div className={styles.illustrationWrapper}>
           <img className={`${styles.illustration}
             ${isPlaceholder ? styles.illustrationPlaceholder : ''}`}
-            src={illustration.url}
-            alt={illustration.altText}
+            src={VAR.illustration.url}
+            alt={VAR.illustration.altText}
           />
         </div>
       </footer>

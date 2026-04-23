@@ -1,4 +1,5 @@
 import styles from './styles.module.css'
+import { topBarVariables as VAR } from '../variables'
 
 interface Props {
   isScrolled: boolean,
@@ -18,14 +19,14 @@ export default function TopBar({ isScrolled, isAtContact }: Props) {
         ${isAtContact ? styles.hidden : ''}
       `}>
         <a href="#">
-          <div className={`${styles.logo} light-lato ${isScrolled ? styles.scrolled : ''}`} title="Maria Amélia Psicoterapia"></div>
+          <div className={`${styles.logo} light-lato ${isScrolled ? styles.scrolled : ''}`} title={VAR.logoTitle}></div>
         </a>
         <nav className={`${styles.nav} normal-open`}>
-          <a href="#beneficios">Benefícios</a>
-          <a href="#depoimentos">Depoimentos</a>
-          <a href="#servicos">Serviços</a>
+          {VAR.navItems.map((item, i) => (
+            <a href={item.href} key={i}>{item.text}</a>
+          ))}
         </nav>
-        <a href="#contato" className="buttonColor">Contato</a>
+        <a href={VAR.contactButton.href} className="buttonColor">{VAR.contactButton.text}</a>
       </header>
     </>
   )
