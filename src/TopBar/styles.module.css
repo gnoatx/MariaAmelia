@@ -4,43 +4,70 @@
     width: 100vw;
     height: 0;
     box-shadow: 0 0 100px 50px #000000ff;
-    z-index: 999;
+    z-index: 200;
     opacity: 0;
-    transition: opacity 0.2s;
+    transition: 0.2s;
 }
 
 .shadow:not(.scrolled):not(:has(+ .topBar:hover)) {
     opacity: 1;
-    transition: opacity 0.2s;
+    transition: 0.2s;
 }
 
 .shadow.hidden {
     transform: translateY(-200px);
 }
 
-.topBar {
-    position: fixed;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    width: 100vw;
-    z-index: 1000;
-    color: var(--highlight-pink);
+.topBar, 
+.topBar::before, 
+.logo::before, 
+.logo::after {
     transition: 0.2s;
 }
 
-.topBar:hover, .topBar.scrolled {
-    transition: 0.2s;
-    background-color: var(--bg-offwhite);
+.topBar {
+    position: fixed;
+    height: 130px;
+    width: 100vw;
+    z-index: 300;
+    color: var(--highlight-pink);
+}
+
+.topBar:hover, 
+.topBar.scrolled {
     color: black;
-    box-shadow:
-        var(--shadow-4),
-        var(--shadow-16);
 }
 
 .topBar.hidden {
     transform: translateY(-200px);
+}
+
+.topBar::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1; 
+    background: url('../assets/topbar.avif') no-repeat bottom center / cover;
+    filter:
+        drop-shadow(var(--shadow-1))
+        drop-shadow(var(--shadow-2)) 
+        drop-shadow(var(--shadow-4))
+        drop-shadow(var(--shadow-8)) 
+        drop-shadow(var(--shadow-16));
+    opacity: 0;
+}
+
+.topBar:hover::before, 
+.topBar.scrolled::before {
+    opacity: 1;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
 }
 
 .logo {
@@ -51,22 +78,16 @@
     width: 232px;
 }
 
-.logo::before, .logo::after {
+.logo::before, 
+.logo::after {
     content: "";
     position: absolute;
     inset: 0;
     background: no-repeat center / contain;
-    transition: 0.2s;
 }
 
 .logo::before {
     background-image: url('../assets/logo-pink.avif');
-    opacity: 1;
-}
-
-.topBar:hover .logo::before, .logo.scrolled::before  {
-    opacity: 0;
-    transition: 0.2s;
 }
 
 .logo::after {
@@ -74,9 +95,14 @@
     opacity: 0;
 }
 
-.topBar:hover .logo::after, .logo.scrolled::after {
+.topBar:hover .logo::before, 
+.topBar.scrolled .logo::before {
+    opacity: 0;
+}
+
+.topBar:hover .logo::after, 
+.topBar.scrolled .logo::after {
     opacity: 1;
-    transition: opacity 0.2s;
 }
 
 .nav {

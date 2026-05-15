@@ -16,9 +16,9 @@
     align-items: flex-start;
     margin-left: 10%;
     bottom: -20px;
-    padding: 10px 30px 30px;
+    padding: 10px 30px 30px 30px;
     width: fit-content;
-    max-width: 300px;
+    max-width: 400px;
     background-color: var(--bg-offwhite);
     /* background-image: linear-gradient(
         var(--bg-offwhite) 0%,
@@ -32,6 +32,7 @@
 .title h1 {
     width: fit-content;
     margin: 20px 0;
+    /* hyphens: auto; */
 }
 
 .sentinel {

@@ -10,8 +10,8 @@ export default function Contact({ hideTriggerRef }: Props) {
   return(
     <footer id={VAR.id} className={styles.footer}>
       <div className={styles.footerTop}>
-        <a href="#" ref={hideTriggerRef}>
-          <div className={styles.icon}></div>
+        <a href="#" ref={hideTriggerRef} className={styles.titleContainer}>
+          <h1 className={styles.sectionTitle}>{VAR.sectionTitle}</h1>
         </a>
         <nav className={styles.social}>
           {VAR.social.map((item, i) => (

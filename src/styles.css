@@ -76,14 +76,37 @@ main::before {
     inset: 0;
     position: absolute;
     z-index: -1;
-    background-image: linear-gradient(to bottom, var(--secondary-pink) 0%, var(--highlight-pink) 100%);
-
+    background-image: linear-gradient(to bottom,
+        var(--secondary-pink) 0%,
+        var(--highlight-pink) 50%,
+        var(--highlight-pink) 60%,
+        transparent 100%
+    );
     mask-image:
         radial-gradient(ellipse 90% 800px at 50% 750px, black 0%, black 30%, rgba(0,0,0,0.4) 60%, transparent 95%),
         linear-gradient(to bottom, transparent 0px, transparent 250px, black 750px, black 100%);
     mask-size: 100% 100%;
     mask-position: 0 0;
     mask-repeat: no-repeat;
+}
+
+main::after {
+    content: "";
+    height: 50%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+    background-image: linear-gradient(to top, var(--secondary-pink) 0%, var(--highlight-pink) 100%);
+    mask-image: radial-gradient(
+        ellipse 150% 100% at 50% -20%, 
+        black 80%, 
+        transparent 100%
+    );
+    mask-size: 100% 100%;
+    mask-repeat: no-repeat;
+    mask-composite: source-over;
 }
 
 section {

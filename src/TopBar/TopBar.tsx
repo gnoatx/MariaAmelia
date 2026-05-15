@@ -18,15 +18,17 @@ export default function TopBar({ isScrolled, isAtContact }: Props) {
         ${isScrolled ? styles.scrolled : ''}
         ${isAtContact ? styles.hidden : ''}
       `}>
-        <a href="#">
-          <div className={`${styles.logo} light-lato ${isScrolled ? styles.scrolled : ''}`} title={VAR.logoTitle}></div>
-        </a>
-        <nav className={`${styles.nav} normal-open`}>
-          {VAR.navItems.map((item, i) => (
-            <a href={item.href} key={i}>{item.text}</a>
-          ))}
-        </nav>
-        <a href={VAR.contactButton.href} className="buttonColor">{VAR.contactButton.text}</a>
+        <div className={styles.container}>
+          <a href="#">
+            <div className={`${styles.logo} light-lato ${isScrolled ? styles.scrolled : ''}`} title={VAR.logoTitle}></div>
+          </a>
+          <nav className={`${styles.nav} normal-open`}>
+            {VAR.navItems.map((item, i) => (
+              <a href={item.href} key={i}>{item.text}</a>
+            ))}
+          </nav>
+          <a href={VAR.contactButton.href} className="buttonColor">{VAR.contactButton.text}</a>
+        </div>
       </header>
     </>
   )

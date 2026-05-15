@@ -21,7 +21,7 @@ export const topBarVariables = {
 }
 
 export const heroVariables = {
-  cardText: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.',
+  cardText: 'Sua jornada de autoconhecimento e bem-estar para uma vida com propósito.',
   button: {
     href: '#contato',
     text: 'Mude sua vida'
@@ -34,23 +34,23 @@ export const benefitsVariables = {
   itemList: [
     {
       icon: 'placeholder-icon', 
-      title: 'Lorem',
-      text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.'
+      title: 'Equilíbrio emocional',
+      text: 'Aprenda a lidar com seus sentimentos para uma rotina mais tranquila.'
     },
     {
       icon: 'placeholder-icon', 
-      title: 'Lorem',
-      text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.'
+      title: 'Qualidade de vida',
+      text: 'Transforme sua saúde mental para viver com muito mais leveza.'
     },
     {
       icon: 'placeholder-icon', 
-      title: 'Lorem',
-      text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.'
+      title: 'Escolha assertiva',
+      text: 'Encontre o caminho certo entre milhares de profissões com segurança.'
     },
     {
       icon: 'placeholder-icon', 
-      title: 'Lorem',
-      text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.'
+      title: 'Propósito de carreira',
+      text: 'Descubra sua vocação e planeje um futuro profissional com sentido.'
     }
   ],
   button: {
@@ -101,6 +101,7 @@ export const serviceVariables = {
 import { Instagram, Linkedin, Whatsapp } from '@thesvg/react'
 export const contactVariables = {
   id: 'contato',
+  sectionTitle: 'Fale conosco',
   social: [
     {
       name: 'Instagram',
@@ -108,14 +109,14 @@ export const contactVariables = {
       href: 'https://www.instagram.com/mameliaaltobelli/'
     },
     {
-      name: 'LinkedIn',
-      icon: Linkedin,
-      href: 'https://www.linkedin.com/in/maria-am%C3%A9lia-altobelli-teixeira-pinto-a6148824/'
-    },
-    {
       name: '(11) 99928-2406',
       icon: Whatsapp,
       href: 'https://wa.me/+5511999282406'
+    },
+    {
+      name: 'LinkedIn',
+      icon: Linkedin,
+      href: 'https://www.linkedin.com/in/maria-am%C3%A9lia-altobelli-teixeira-pinto-a6148824/'
     },
   ],
   documents: {
