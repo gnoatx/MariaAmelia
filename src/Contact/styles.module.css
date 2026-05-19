@@ -67,6 +67,11 @@
 
 }
 
+.creditContainer {
+    display: flex;
+    flex-direction: column;
+}
+
 .credit {
 
 }

@@ -1,37 +1,48 @@
 .hero {
-    padding-top: 73px;
+    /* padding-top: 73px; */
+    position: relative;
     width: 100%;
     height: 66.6vw;
     max-height: 95vh;
-    background: url("../assets/Alex-Green.avif") no-repeat center / cover;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("../assets/Alex-Green.avif") no-repeat center / cover;
+    mask:
+        linear-gradient(to bottom, white, white) no-repeat top / 100% 100%,
+        url("../assets/hero-mask.png") no-repeat bottom / contain;
+    mask-composite: subtract;
 }
 
 .title {
     position: relative;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     margin-left: 10%;
-    bottom: -20px;
-    padding: 10px 30px 30px 30px;
-    width: fit-content;
-    max-width: 400px;
-    background-color: var(--bg-offwhite);
-    /* background-image: linear-gradient(
-        var(--bg-offwhite) 0%,
-        var(--bg-offwhite) 80%,
-        white 100%
-    ); */
-    border-radius: 22px;
-    box-shadow: var(--shadow-16)
+    bottom: -40px;
+    padding: 40px 30px 30px 30px;
+    width: 350px;
+    aspect-ratio: 700 / 511;
+    background: url("../assets/card.avif") no-repeat top left / cover;
+    filter:
+        drop-shadow(var(--shadow-1))
+        drop-shadow(var(--shadow-2))
+        drop-shadow(var(--shadow-4))
+        drop-shadow(var(--shadow-8))
+        drop-shadow(var(--shadow-16));
 }
 
 .title h1 {
-    width: fit-content;
+    width: 240px;
     margin: 20px 0;
+    font-size: 1.65rem;
     /* hyphens: auto; */
 }
 

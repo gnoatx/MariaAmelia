@@ -107,11 +107,6 @@
 
 .illustration {
     width: auto;
-    height: 100%;
+    height: 400px;
     object-fit: contain;
-}
-
-.illustrationPlaceholder {
-    width: 100%;
-    object-fit: fill;
 }

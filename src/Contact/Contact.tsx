@@ -28,9 +28,14 @@ export default function Contact({ hideTriggerRef }: Props) {
             CRP {VAR.documents.crp}<br />
             CNPJ {VAR.documents.cnpj}
           </span>
-          <a className={styles.credit} href={VAR.credit.href}>
-            Site por <span className={styles.creditLink}>{VAR.credit.name}</span> @ {VAR.credit.year}
-          </a>
+          <span className={styles.creditContainer}>
+            <a className={styles.credit} href={VAR.creditCode.href}>
+              Site programado por <span className={styles.creditLink}>{VAR.creditCode.name}</span> @ {VAR.creditCode.year}
+            </a>
+            <a className={styles.credit} href={VAR.creditDesign.href}>
+              Design e ilustrações por <span className={styles.creditLink}>{VAR.creditDesign.name}</span> @ {VAR.creditDesign.year}
+            </a>
+          </span>
         </div>
         <p className={styles.disclaimer}>
           {VAR.legalDisclaimer}

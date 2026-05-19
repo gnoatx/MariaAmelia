@@ -14,7 +14,7 @@ export default function Hero({styleTriggerRef}: Props) {
         <h1 className="light-lato">
           {VAR.cardText}
         </h1>
-        <a href={VAR.button.href} className="buttonColor">{VAR.button.text}</a>
+        {/* <a href={VAR.button.href} className="buttonColor">{VAR.button.text}</a> */}
       </div>
     </header>
   )

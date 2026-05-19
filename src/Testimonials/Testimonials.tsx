@@ -15,9 +15,6 @@ interface Props {
 }
 
 export default function Testimonials({ list }: Props) {
-  const illustrationPlaceholder = new URL(`../assets/placeholder-icon.png`, import.meta.url).href
-  const isPlaceholder = VAR.illustration.url === illustrationPlaceholder
-
   const buffer = 5
   const [currentIndex, setCurrentIndex] = useState(buffer)
   const [isTransitioning, setIsTransitioning] = useState(false)
@@ -86,8 +83,7 @@ export default function Testimonials({ list }: Props) {
           <a href={VAR.button.href} className="buttonOutline">{VAR.button.text}</a>
         </div>
         <div className={styles.illustrationWrapper}>
-          <img className={`${styles.illustration}
-            ${isPlaceholder ? styles.illustrationPlaceholder : ''}`}
+          <img className={styles.illustration}
             src={VAR.illustration.url}
             alt={VAR.illustration.altText}
           />
