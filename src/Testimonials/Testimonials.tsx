@@ -15,7 +15,7 @@ interface Props {
 }
 
 export default function Testimonials({ list }: Props) {
-  const buffer = 5
+  const buffer = Math.min(5, list.length)
   const [currentIndex, setCurrentIndex] = useState(buffer)
   const [isTransitioning, setIsTransitioning] = useState(false)
   

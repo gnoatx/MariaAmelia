@@ -13,7 +13,7 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: url("../assets/Alex-Green.avif") no-repeat center / cover;
+    background: url("../assets/hero-maria-amelia.avif") no-repeat center / cover;
     mask:
         linear-gradient(to bottom, white, white) no-repeat top / 100% 100%,
         url("../assets/hero-mask.png") no-repeat bottom / contain;
@@ -42,7 +42,7 @@
 .title h1 {
     width: 240px;
     margin: 20px 0;
-    font-size: 1.65rem;
+    font-size: 1.55rem;
     /* hyphens: auto; */
 }
 

@@ -21,7 +21,8 @@ export const topBarVariables = {
 }
 
 export const heroVariables = {
-  cardText: 'Sua jornada de autoconhecimento e bem-estar para uma vida com propósito.',
+  // cardText: 'Sua jornada de autoconhecimento e bem-estar para uma vida com propósito.',
+  cardText: 'Sua trajetória mais leve e mais feliz através de uma escuta atenta e respeitosa!',
   button: {
     href: '#contato',
     text: 'Mude sua vida'
