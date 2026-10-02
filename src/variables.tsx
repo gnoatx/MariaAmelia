@@ -21,8 +21,7 @@ export const topBarVariables = {
 }
 
 export const heroVariables = {
-  // cardText: 'Sua jornada de autoconhecimento e bem-estar para uma vida com propósito.',
-  cardText: 'Sua trajetória mais leve e mais feliz através de uma escuta atenta e respeitosa!',
+  cardText: 'Um olhar cuidadoso para pessoas, escolhas e caminhos.',
   button: {
     href: '#contato',
     text: 'Mude sua vida'
@@ -36,22 +35,22 @@ export const benefitsVariables = {
     {
       icon: 'equilibrio-icon', 
       title: 'Equilíbrio emocional',
-      text: 'Aprenda a lidar com seus sentimentos para uma rotina mais tranquila.'
+      text: 'Um espaço de escuta, compreensão e cuidado emocional.'
     },
     {
       icon: 'qualidade-icon', 
       title: 'Qualidade de vida',
-      text: 'Transforme sua saúde mental para viver com muito mais leveza.'
+      text: 'Acolhimento para compreender sentimentos, desafios e possibilidades.'
     },
     {
       icon: 'escolha-icon', 
       title: 'Escolha assertiva',
-      text: 'Encontre o caminho certo entre milhares de profissões com segurança.'
+      text: 'Clareza para refletir sobre escolhas, interesses e caminhos profissionais.'
     },
     {
       icon: 'proposito-icon', 
       title: 'Propósito de carreira',
-      text: 'Descubra sua vocação e planeje um futuro profissional com sentido.'
+      text: 'Apoio com processos de avaliação de pessoas para recrutamento, seleção e carreira.'
     }
   ],
   button: {
@@ -63,10 +62,10 @@ export const benefitsVariables = {
 export const testimonialsVariables = {
   id: 'depoimentos',
   sectionTitle: 'Resultados que transformam: a experiência de quem escolheu viver com mais leveza e direção.',
-  callout: 'Junte-se a tantas outras pessoas que decidiram não carregar mais o peso da dúvida e da ansiedade sozinhos.',
+  callout: 'Espaço de escuta, reflexão e cuidado, respeitando seu momento e história.',
   button: {
     href: '#contato',
-    text: 'Agende sua sessão agora'
+    text: 'Agende uma conversa'
   },
   illustration: {
     url: new URL('./assets/testimonials-illustration.avif', import.meta.url).href,
@@ -81,18 +80,15 @@ export const serviceVariables = {
       title: 'Psicoterapia',
       button: {
         href: '#contato',
-        text: 'Eu quero esse cuidado'
+        text: 'Conheça meu trabalho'
       },
       image: 'psicoterapia-illustration',
       description:
         <>
-          <p>Sempre que ouvimos falar em algum tipo de terapia, pensamos:</p>
-          <q>Será que é para mim? Será que é coisa para louco?</q>
-          <p>Mas eu estou aqui para te dizer: Sim, a psicoterapia é para você! Na
-verdade, é para todos.</p>
-          <p>Para todos que querem investigar, buscar respostas para questões pessoais
-e ressignificá-las, entendê-las de uma maneira diferente e, assim, viver uma
-vida mais feliz, consciente e tranquila, dentro e fora do ambiente de trabalho.</p>
+          <p>Um espaço de escuta, reflexão e cuidado.</p>
+          <p>A psicoterapia pode ajudar a compreender melhor sentimentos, pensamentos, comportamentos e situações que fazem parte da nossa história.</p>
+          <p>É um processo de autoconhecimento e elaboração, no qual é possível olhar para dificuldades, relações e escolhas com mais clareza, construindo novas formas de lidar com aquilo que traz sofrimento ou inquietação.</p>
+          <p>Cada processo é único e acontece respeitando o momento, a história e as necessidades de cada pessoa.</p>
         </>
     },
     {
@@ -100,19 +96,31 @@ vida mais feliz, consciente e tranquila, dentro e fora do ambiente de trabalho.<
       title: 'Orientação Profissional',
       button: {
         href: '#contato',
-        text: 'Tome a decisão certa hoje'  
+        text: 'Conheça o processo'  
       },
       image: 'orientacao-illustration',
       description:
         <>
-          <p>Escolher uma profissão não é uma tarefa fácil.</p>
-          <p>É um momento da vida que gera muita ansiedade e medo.</p>
-          <p>Portanto, tomar uma decisão com base em um estudo de perfil e no
-mapeamento de suas habilidades, competências e interesses, realizado por
-uma psicóloga especializada, é valiosíssimo em vários sentidos.</p>
-          <p>A orientação vocacional e profissional traz segurança, promove o
-autoconhecimento e evita uma escolha errada, que pode provocar imenso
-estresse futuro.</p>
+          <p>Escolher uma profissão é uma decisão importante e envolve muito mais do que descobrir “o que combina comigo”.</p>
+          <p>A Orientação Profissional é um processo de reflexão e autoconhecimento que ajuda o jovem a compreender seus interesses, habilidades, características pessoais, valores e expectativas para o futuro.</p>
+          <p>Ao longo do processo, essas informações são integradas ao conhecimento sobre cursos, profissões e possibilidades de carreira, favorecendo uma escolha mais consciente e coerente com que quem busca é e com o que deseja construir.</p>
+          <p>Mais do que apontar uma profissão, o objetivo é ampliar possibilidades e oferecer recursos para uma decisão com mais clareza e segurança.</p>
+        </>
+    },
+    {
+      id: 'avaliacao',
+      title: 'Avaliação de Pessoas para Decisões Profissionais',
+      button: {
+        href: '#contato',
+        text: 'Conheça este serviço'
+      },
+      image: 'orientacao-illustration',
+      description:
+        <>
+          <p>Decisões sobre pessoas exigem mais do que analisar um currículo.</p>
+          <p>A avaliação profissional oferece às empresas informações qualificadas para apoiar decisões relacionadas à seleção, promoção, mobilidade interna e desenvolvimento de profissionais.</p>
+          <p>Por meio de entrevistas, análise de trajetória e instrumentos psicológicos adequados à finalidade da avaliação, são considerados aspectos como competências, características comportamentais, potencialidades e aderência às demandas da posição e do contexto organizacional.</p>
+          <p>O objetivo é oferecer um olhar técnico e cuidadoso sobre cada profissional, contribuindo para decisões mais fundamentadas — tanto na chegada de novos talentos quanto nos movimentos de carreira dentro da organização.</p>
         </>
     }
   ]
