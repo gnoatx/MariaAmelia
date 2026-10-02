@@ -25,8 +25,8 @@ export default function Contact({ hideTriggerRef }: Props) {
         <div className={styles.names}>
           <span className={styles.document}>
             {VAR.documents.name}<br />
-            CRP {VAR.documents.crp}<br />
-            CNPJ {VAR.documents.cnpj}
+            Psicóloga. CRP-{VAR.documents.crp}<br />
+            {/* CNPJ {VAR.documents.cnpj} */}
           </span>
           <span className={styles.creditContainer}>
             <a className={styles.credit} href={VAR.creditCode.href}>
@@ -37,9 +37,9 @@ export default function Contact({ hideTriggerRef }: Props) {
             </a>
           </span>
         </div>
-        <p className={styles.disclaimer}>
+        {/* <p className={styles.disclaimer}>
           {VAR.legalDisclaimer}
-        </p>
+        </p> */}
       </div>
     </footer>
   )

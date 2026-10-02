@@ -114,7 +114,7 @@ export const serviceVariables = {
         href: '#contato',
         text: 'Conheça este serviço'
       },
-      image: 'orientacao-illustration',
+      image: 'avaliacao-illustration',
       description:
         <>
           <p>Decisões sobre pessoas exigem mais do que analisar um currículo.</p>
@@ -148,8 +148,8 @@ export const contactVariables = {
     },
   ],
   documents: {
-    name: 'Psicóloga Maria Amélia Altobelli',
-    crp: '00000',
+    name: 'Maria Amélia Altobelli',
+    crp: '6/44796',
     cnpj: '00.000.000/0000-00'
   },
   creditCode: {
